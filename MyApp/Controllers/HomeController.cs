@@ -18,6 +18,7 @@ namespace MyApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Student(Student model)
         {
             // model에 있는 유효성 검사 확인
