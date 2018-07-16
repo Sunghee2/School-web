@@ -26,3 +26,13 @@ C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp
 C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.RazorTargetAssemblyInfo.cache
 C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.dll
 C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.pdb
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\bin\Debug\netcoreapp2.1\MyApp.Views.dll
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\bin\Debug\netcoreapp2.1\MyApp.Views.pdb
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.TagHelpers.input.cache
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.TagHelpers.output.cache
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.RazorCoreGenerate.cache
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Student.g.cshtml.cs
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.RazorTargetAssemblyInfo.cs
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.Views.pdb
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\MyApp.csproj.CopyComplete
+C:\Users\630su\Documents\GitHub\asp.net_core\MyApp\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
