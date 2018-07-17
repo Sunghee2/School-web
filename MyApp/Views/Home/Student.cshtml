@@ -1,5 +1,5 @@
-﻿@using MyApp.Models
-@model Student
+﻿@using MyApp.ViewModels
+@model StudentTeacherViewModel
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
 
@@ -11,23 +11,45 @@
     <div class="form-group">
         <div class="col-md-3">
             <label>Name: </label>
-            <input type="text" class="form-control" asp-for="Name"/>
-            <span asp-validation-for="Name"></span>
+            <input type="text" class="form-control" asp-for="@Model.Student.Name"/> 
+            <span asp-validation-for="@Model.Student.Name"></span>
         </div>
         <div class="form-group">
             <div class="col-md-3">
                 <label>Age: </label>
-                <input type="text" class="form-control" asp-for="Age"/>
-                <span asp-validation-for="Age"></span>
+                <input type="text" class="form-control" asp-for="@Model.Student.Age"/>
+                <span asp-validation-for="@Model.Student.Age"></span>
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-3">
                 <label>Country: </label>
-                <input type="text" class="form-control" asp-for="Country"/>
-                <span asp-validation-for="Country"></span>
+                <input type="text" class="form-control" asp-for="@Model.Student.Country"/>
+                <span asp-validation-for="@Model.Student.Country"></span>
             </div>
         </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<br />
+
+<h1>Our Teachers</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var teacher in Model.Teachers)
+        {
+            <tr>
+                <td>@teacher.Name</td>
+                <td>@teacher.Class</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
