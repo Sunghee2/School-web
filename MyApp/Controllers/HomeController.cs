@@ -12,6 +12,11 @@ namespace MyApp.Controllers
 {
     public class HomeController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         // GET: /<controller>/
         public IActionResult Student()
         {

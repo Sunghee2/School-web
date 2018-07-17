@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// 한 페이지(view)에 보이고 싶어하는 model을 묶음.
 namespace MyApp.ViewModels
 {
     public class StudentTeacherViewModel
