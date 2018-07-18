@@ -1,32 +1,31 @@
-﻿@using MyApp.ViewModels
-@model StudentTeacherViewModel
+﻿@model StudentTeacherViewModel
 
-@{ 
+@{
     ViewBag.Title = "Student";
 }
 
 <h3>Add New Student</h3>
 <form class="form form-horizontal" method="POST">
     <div class="form-group">
-        <img src="https://image.ibb.co/iKfYKx/computer.jpg"/>
+        <img src="https://image.ibb.co/iKfYKx/computer.jpg" />
     </div>
     <div class="form-group">
         <div class="col-md-3">
             <label>Name: </label>
-            <input type="text" class="form-control" asp-for="@Model.Student.Name"/> 
+            <input type="text" class="form-control" asp-for="@Model.Student.Name" />
             <span asp-validation-for="@Model.Student.Name"></span>
         </div>
         <div class="form-group">
             <div class="col-md-3">
                 <label>Age: </label>
-                <input type="text" class="form-control" asp-for="@Model.Student.Age"/>
+                <input type="text" class="form-control" asp-for="@Model.Student.Age" />
                 <span asp-validation-for="@Model.Student.Age"></span>
             </div>
         </div>
         <div class="form-group">
             <div class="col-md-3">
                 <label>Country: </label>
-                <input type="text" class="form-control" asp-for="@Model.Student.Country"/>
+                <input type="text" class="form-control" asp-for="@Model.Student.Country" />
                 <span asp-validation-for="@Model.Student.Country"></span>
             </div>
         </div>
@@ -36,22 +35,4 @@
 
 <br />
 
-<h1>Our Teachers</h1>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Class</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var teacher in Model.Teachers)
-        {
-            <tr>
-                <td>@teacher.Name</td>
-                <td>@teacher.Class</td>
-            </tr>
-
-        }
-    </tbody>
-</table>
+@await Html.PartialAsync("_TeacherTable", Model);
