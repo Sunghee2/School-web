@@ -55,7 +55,7 @@ using MyApp.ViewModels;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 220, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4545cc33a15449d7b42be34f1c316fa1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "44bd588bb4a446c082ce30895a2f581b", async() => {
                 BeginContext(33, 72, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
                 EndContext();
@@ -85,12 +85,12 @@ using MyApp.ViewModels;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(249, 1082, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40f8bf9cafbe42a59b066e8a14da2444", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9bfe5689162f4ea28ef39951f3f8bde2", async() => {
                 BeginContext(255, 84, true);
                 WriteLiteral("\r\n    <nav class=\"navbar navbar-expand-lg sticky-top navbar-dark bg-dark\">\r\n        ");
                 EndContext();
                 BeginContext(339, 74, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "742ca50a12e748769576715c6d68fcfe", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "93910a7f31644c75b09d048d62a9bdd4", async() => {
                     BeginContext(404, 5, true);
                     WriteLiteral("MyApp");
                     EndContext();
@@ -123,7 +123,7 @@ using MyApp.ViewModels;
                     ");
                 EndContext();
                 BeginContext(839, 69, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3a03236775144ddba92fb847141c3bc5", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9d7bb396c10f4b37bf7f7b9044eaf2ee", async() => {
                     BeginContext(900, 4, true);
                     WriteLiteral("Home");
                     EndContext();
@@ -148,7 +148,7 @@ using MyApp.ViewModels;
                 WriteLiteral("\r\n                </li>\r\n                <li class=\"nav-item\">\r\n                    ");
                 EndContext();
                 BeginContext(992, 74, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "682f33ff74de409dba14d5397613f321", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8491a161fdbd415c96b47e7a9cf288c5", async() => {
                     BeginContext(1055, 7, true);
                     WriteLiteral("Student");
                     EndContext();
