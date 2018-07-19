@@ -29,13 +29,14 @@ namespace MyApp
             services.AddDbContext<MyAppContext>(options =>
             {
                 options.UseSqlServer(_config.GetConnectionString("MyAppConnection"));
-            }); 
+            });
 
+            services.AddTransient<DbSeeder>();
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, DbSeeder seeder)
         {
             if (env.IsDevelopment())
             {
@@ -49,6 +50,9 @@ namespace MyApp
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            // task이므로 Wait 사용 (async)
+            seeder.SeedDatabase().Wait();
         }
     }
 }

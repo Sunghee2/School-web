@@ -11,7 +11,7 @@ namespace MyApp.Data
     {
         public MyAppContext(DbContextOptions options) : base(options) {}
 
-        public DbSet<Student> students { get; set; }
-        public DbSet<Teacher> teachers { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
     }
 }
