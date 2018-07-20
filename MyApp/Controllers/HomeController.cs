@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MyApp.Data.Repositories;
 using MyApp.Models;
 using MyApp.ViewModels;
 
@@ -12,15 +13,16 @@ namespace MyApp.Controllers
 {
     public class HomeController : Controller
     {
+        private ITeacherRepository _repository;
+
+        public HomeController(ITeacherRepository repository)
+        {
+            _repository = repository;
+        }
+
         public IActionResult Index()
         {
-            List<Teacher> teachers = new List<Teacher>()
-            {
-                new Teacher(){ Name = "세종대왕", Class = "한글" },
-                new Teacher(){ Name = "이순신", Class = "해상전략" },
-                new Teacher(){ Name = "제갈량", Class = "지략" },
-                new Teacher(){ Name = "을지문덕", Class = "지상전략" }
-            };
+            var teachers = _repository.GetAllTeachers();
 
             var viewModel = new StudentTeacherViewModel()
             {
@@ -34,13 +36,7 @@ namespace MyApp.Controllers
         // GET: /<controller>/
         public IActionResult Student()
         {
-            List<Teacher> teachers = new List<Teacher>()
-            {
-                new Teacher(){ Name = "세종대왕", Class = "한글" },
-                new Teacher(){ Name = "이순신", Class = "해상전략" },
-                new Teacher(){ Name = "제갈량", Class = "지략" },
-                new Teacher(){ Name = "을지문덕", Class = "지상전략" }
-            };
+            var teachers = _repository.GetAllTeachers();
 
             var viewModel = new StudentTeacherViewModel()
             {

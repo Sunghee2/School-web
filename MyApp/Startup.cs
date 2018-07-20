@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyApp.Data;
+using MyApp.Data.Repositories;
 
 namespace MyApp
 {
@@ -32,6 +33,7 @@ namespace MyApp
             });
 
             services.AddTransient<DbSeeder>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddMvc();
         }
 
