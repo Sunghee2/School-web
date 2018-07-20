@@ -38,12 +38,12 @@ namespace MyApp.Controllers
         // GET: /<controller>/
         public IActionResult Student()
         {
-            var teachers = _teacherRepository.GetAllTeachers();
+            var students = _studentRepository.GetAllStudents();
 
             var viewModel = new StudentTeacherViewModel()
             {
                 Student = new Student(),
-                Teachers = teachers
+                Students = students
             };
 
             return View(viewModel);
@@ -64,7 +64,25 @@ namespace MyApp.Controllers
             {
                 // error
             }
-            return View();
+            var students = _studentRepository.GetAllStudents();
+
+            var viewModel = new StudentTeacherViewModel()
+            {
+                Student = new Student(),
+                Students = students
+            };
+
+            // input value 삭제
+            ModelState.Clear();
+
+            return View(viewModel);
+        }
+
+        public IActionResult Detail(int id)
+        {
+            var result = _studentRepository.GetStudent(id);
+
+            return View(result);
         }
     }
 }

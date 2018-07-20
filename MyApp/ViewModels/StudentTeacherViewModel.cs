@@ -11,5 +11,6 @@ namespace MyApp.ViewModels
     {
         public Student Student { get; set; }
         public IEnumerable<Teacher> Teachers { get; set; }
+        public IEnumerable<Student> Students { get; set; }
     }
 }
