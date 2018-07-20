@@ -108,5 +108,19 @@ namespace MyApp.Controllers
 
             return View(student);
         }
+
+        public IActionResult Delete(int id)
+        {
+            var result = _studentRepository.GetStudent(id);
+            
+            if (result != null)
+            {
+                _studentRepository.Delete(result);
+                _studentRepository.Save();
+
+            }
+
+            return RedirectToAction("Student");
+        }
     }
 }
