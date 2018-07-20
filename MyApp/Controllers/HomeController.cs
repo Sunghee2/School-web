@@ -59,6 +59,8 @@ namespace MyApp.Controllers
                 // model 데이터를 Student table에 저장
                 _studentRepository.AddStudent(model.Student);
                 _studentRepository.Save();
+                // input value 삭제
+                ModelState.Clear();
             } 
             else
             {
@@ -72,8 +74,6 @@ namespace MyApp.Controllers
                 Students = students
             };
 
-            // input value 삭제
-            ModelState.Clear();
 
             return View(viewModel);
         }
@@ -83,6 +83,30 @@ namespace MyApp.Controllers
             var result = _studentRepository.GetStudent(id);
 
             return View(result);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var result = _studentRepository.GetStudent(id);
+
+            return View(result);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Student student)
+        {
+            // model에 있는 유효성 검사 확인
+            if (ModelState.IsValid)
+            {
+                // model 데이터를 Student table에 저장
+                _studentRepository.Edit(student);
+                _studentRepository.Save();
+
+                return RedirectToAction("Student");
+            }
+
+            return View(student);
         }
     }
 }

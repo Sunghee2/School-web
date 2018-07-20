@@ -38,5 +38,10 @@ namespace MyApp.Data.Repositories
 
             return result;
         }
+
+        public void Edit(Student student)
+        {
+            _context.Update(student);
+        }
     }
 }
