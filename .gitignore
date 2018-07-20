@@ -1,2 +1,9 @@
 
 .vs/
+
+# Build results
+MyApp/[Dd]ebug/
+MyApp/[Rr]elease/
+MyApp/x64/
+MyApp/bin/
+MyApp/obj/
