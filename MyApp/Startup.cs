@@ -34,6 +34,7 @@ namespace MyApp
 
             services.AddTransient<DbSeeder>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddMvc();
         }
 

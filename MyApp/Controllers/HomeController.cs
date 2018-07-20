@@ -13,16 +13,18 @@ namespace MyApp.Controllers
 {
     public class HomeController : Controller
     {
-        private ITeacherRepository _repository;
+        private ITeacherRepository _teacherRepository;
+        private IStudentRepository _studentRepository;
 
-        public HomeController(ITeacherRepository repository)
+        public HomeController(ITeacherRepository teacherRepository, IStudentRepository studentRepository)
         {
-            _repository = repository;
+            _teacherRepository = teacherRepository;
+            _studentRepository = studentRepository;
         }
 
         public IActionResult Index()
         {
-            var teachers = _repository.GetAllTeachers();
+            var teachers = _teacherRepository.GetAllTeachers();
 
             var viewModel = new StudentTeacherViewModel()
             {
@@ -36,7 +38,7 @@ namespace MyApp.Controllers
         // GET: /<controller>/
         public IActionResult Student()
         {
-            var teachers = _repository.GetAllTeachers();
+            var teachers = _teacherRepository.GetAllTeachers();
 
             var viewModel = new StudentTeacherViewModel()
             {
@@ -55,6 +57,8 @@ namespace MyApp.Controllers
             if(ModelState.IsValid)
             {
                 // model 데이터를 Student table에 저장
+                _studentRepository.AddStudent(model.Student);
+                _studentRepository.Save();
             } 
             else
             {
