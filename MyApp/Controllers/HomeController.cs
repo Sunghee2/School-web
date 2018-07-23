@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyApp.Data.Repositories;
 using MyApp.Models;
@@ -36,6 +37,7 @@ namespace MyApp.Controllers
         }
 
         // GET: /<controller>/
+        [Authorize]
         public IActionResult Student()
         {
             var students = _studentRepository.GetAllStudents();

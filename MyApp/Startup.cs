@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MyApp.Data;
 using MyApp.Data.Repositories;
+using MyApp.Models;
 
 namespace MyApp
 {
