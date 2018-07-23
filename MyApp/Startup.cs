@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,12 @@ namespace MyApp
                 options.UseSqlServer(_config.GetConnectionString("MyAppConnection"));
             });
 
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 6;
+                
+            })
+            .AddEntityFrameworkStores<MyAppContext>();
             services.AddTransient<DbSeeder>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<IStudentRepository, StudentRepository>();
@@ -47,6 +54,10 @@ namespace MyApp
             }
 
             app.UseStaticFiles();
+
+            //인증 서비스 활성화
+            app.UseAuthentication();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
