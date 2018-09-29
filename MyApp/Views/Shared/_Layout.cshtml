@@ -21,6 +21,9 @@
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                     </li>
+                }
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                {
                     <li class="nav-item">
                         <a class="nav-link" asp-controller="Home" asp-action="Student">Student</a>
                     </li>
@@ -30,16 +33,16 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Account" asp-action="Logout">로그아웃</a>
+                        <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
                     </li>
                 }
                 else
                 {
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Account" asp-action="Register">회원가입</a>
+                        <a class="nav-link" asp-controller="Account" asp-action="Register">Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" asp-controller="Account" asp-action="Login">로그인</a>
+                        <a class="nav-link" asp-controller="Account" asp-action="Login">Sign In</a>
                     </li>
                 }
             </ul>

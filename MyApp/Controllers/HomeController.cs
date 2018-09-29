@@ -38,7 +38,7 @@ namespace MyApp.Controllers
         }
 
         // GET: /<controller>/
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Student()
         {
             var students = _studentRepository.GetAllStudents();
@@ -54,6 +54,7 @@ namespace MyApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult Student(StudentTeacherViewModel model)
         {
             // model에 있는 유효성 검사 확인
