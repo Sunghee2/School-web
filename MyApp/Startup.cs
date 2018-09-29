@@ -67,7 +67,7 @@ namespace MyApp
             });
 
             // task이므로 Wait 사용 (async)
-            seeder.SeedDatabase().Wait();
+            // seeder.SeedDatabase().Wait();
         }
     }
 }

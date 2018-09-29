@@ -16,14 +16,21 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Student">Student</a>
+                    </li>
+                }
+            </ul>
+            <ul class="navbar-nav pull-right">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Account" asp-action="Register">회원가입</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="Home" asp-action="Student">Student</a>
-                </li>
-                <li class="nav-item pull-right">
-                    <a class="nav-link" asp-controller="Account" asp-action="Register">회원가입</a>
                     <a class="nav-link" asp-controller="Account" asp-action="Login">로그인</a>
                 </li>
             </ul>
