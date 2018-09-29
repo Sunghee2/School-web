@@ -1,0 +1,23 @@
+﻿@model LoginViewModel
+
+<div class="row">
+    <div class="col-md-2 col-md-offset-5">
+        <h2 class="text-center">로그인</h2>
+        <hr />
+        <form class="form-horizontal" method="post">
+            <div class="form-group">
+                <label asp-for="Email">이메일</label>
+                <input class="form-control" asp-for="Email" />
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">비밀번호</label>
+                <input class="form-control" asp-for="Password" />
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">로그인</button>
+            </div>
+        </form>
+    </div>
+</div>

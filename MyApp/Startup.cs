@@ -63,7 +63,7 @@ namespace MyApp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Login}/{id?}");
             });
 
             // task이므로 Wait 사용 (async)
